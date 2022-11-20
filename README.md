@@ -1,5 +1,10 @@
 #
 
+* URL: `https://localhost:5000`
+* URN: `/api/users`
+* URI: `URL + URN`
+
+
 ##
 
 1. `'X-CSRFToken': await generate_token()`.
