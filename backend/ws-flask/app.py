@@ -1,7 +1,12 @@
+from json import dump, load
+from os.path import exists
+
 from flask import Flask, redirect, url_for, request
+from flask_cors import CORS
 
 
 app = Flask(__name__)
+CORS(app)
 
 header = {'Content-Type': 'application/json'}
 table = []
@@ -9,7 +14,6 @@ error_http = {
     '400': {'message': 'Usuário não existe.'},
     '409': {'message': 'Usuário já existe.'}
 }
-
 
 
 @app.route('/', methods=['GET'])
